@@ -6,13 +6,6 @@ resources:
     branch: master
 
 jobs:
-- name: test-app
-  plan:
-  - get: flight-school
-    trigger: true
-  - task: tests
-    file: flight-school/build.yml
-
 - name: test-app-1
   plan:
   - get: flight-school
@@ -21,6 +14,13 @@ jobs:
     file: flight-school/build.yml
 
 - name: test-app-2
+  plan:
+  - get: flight-school
+    trigger: true
+  - task: tests
+    file: flight-school/build.yml
+
+- name: test-app-3
   plan:
   - get: flight-school
     trigger: true

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# testing...
 set -e -x
 
 pushd flight-school

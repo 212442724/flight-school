@@ -12,3 +12,18 @@ jobs:
     trigger: true
   - task: tests
     file: flight-school/build.yml
+
+- name: test-app-1
+  plan:
+  - get: flight-school
+    trigger: true
+  - task: tests
+    file: flight-school/build.yml
+
+- name: test-app-2
+  plan:
+  - get: flight-school
+    trigger: true
+  - task: tests
+    file: flight-school/build.yml
+

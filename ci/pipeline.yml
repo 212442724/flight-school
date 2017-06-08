@@ -5,12 +5,6 @@ resources:
     uri: https://github.com/212442724/flight-school
     branch: master
 
-- name: flight-school-2
-  type: git
-  source:
-    uri: https://github.com/212442724/flight-school
-    branch: master
-
 - name: flight-school
   type: git
   source:
@@ -28,7 +22,7 @@ jobs:
 
 - name: test-app-2
   plan:
-  - get: flight-school-2
+  - get: flight-school
     trigger: true
   - task: tests
     file: flight-school/build.yml
